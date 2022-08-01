@@ -1,0 +1,57 @@
+@page
+@model BookstoreApp.Pages.Books.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Book</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Book.ID" />
+            <div class="form-group">
+                <label asp-for="Book.Title" class="control-label"></label>
+                <input asp-for="Book.Title" class="form-control" />
+                <span asp-validation-for="Book.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.Synopsis" class="control-label"></label>
+                <input asp-for="Book.Synopsis" class="form-control" />
+                <span asp-validation-for="Book.Synopsis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.Genre" class="control-label"></label>
+                <input asp-for="Book.Genre" class="form-control" />
+                <span asp-validation-for="Book.Genre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.AverageRating" class="control-label"></label>
+                <input asp-for="Book.AverageRating" class="form-control" />
+                <span asp-validation-for="Book.AverageRating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.CopiesSold" class="control-label"></label>
+                <input asp-for="Book.CopiesSold" class="form-control" />
+                <span asp-validation-for="Book.CopiesSold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.ReleaseDate" class="control-label"></label>
+                <input asp-for="Book.ReleaseDate" class="form-control" />
+                <span asp-validation-for="Book.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
