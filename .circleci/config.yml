@@ -16,7 +16,7 @@ jobs:
           name: "Install project dependencies"
           command: dotnet.exe restore
       - run:
-          name: "Build the Application according to some given configuration"
+          name: "Build the application according to some given configuration"
           command: dotnet.exe build --configuration Release
 workflows:
   heroku_deploy:
