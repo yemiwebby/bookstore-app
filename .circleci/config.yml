@@ -24,8 +24,8 @@ jobs:
           force: true
       - run:
           command: |
-            heroku run --app=${HEROKU_APP_NAME} dotnet.exe ef migrations add InitialCreate --context=AppContext
-            heroku run --app=${HEROKU_APP_NAME} dotnet.exe ef database update --context=AppContext
+            heroku run --app=${HEROKU_APP_NAME} dotnet ef migrations add InitialCreate --context=AppContext
+            heroku run --app=${HEROKU_APP_NAME} dotnet ef database update --context=AppContext
 workflows:
   deploy:
     jobs:
