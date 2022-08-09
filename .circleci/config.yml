@@ -30,4 +30,6 @@ workflows:
   deploy:
     jobs:
       - build
-      - deploy_app
+      - deploy_app:
+          requires:
+            - build
